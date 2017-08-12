@@ -33,8 +33,7 @@ func main() {
 
 			//再生
 			if ok != true {
-				out, err := exec.Command("omxplayer", "/home/pi/flask/Dr.Noguti.mov &").Output()
-				//out, err := exec.Command("omxplayer", "/opt/vc/src/hello_pi/hello_video/test.h264 &").Output()
+				out, err := exec.Command("omxplayer", "-b", "/home/pi/flask/Dr.Noguti.mov").Output()
 				if err != nil {
 					log.Print(err)
 				} else {
